@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <!-- <header>Python Documentation</header> -->
+    <!--  Later add the links to the sections 
+    
+    -->
+  </nav> 
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+      <p>Python enables programs to be written compactly and readably. Programs written in Python are typically much shorter than equivalent C, C++, or Java programs, for several reasons:</p>
+      <ul>
+        <li>the high-level data types allow you to express complex operations in a single statement;</li>
+        <li>statement grouping is done by indentation instead of beginning and ending brackets;</li>
+        <li>no variable or argument declarations are necessary.</li>
+      </ul>
+      <p>Python is extensible: if you know how to program in C it is easy to add a new built-in function or module to the interpreter, either to perform critical operations at maximum speed, or to link Python programs to libraries that may only be available in binary form (such as a vendor-specific graphics library). Once you are really hooked, you can link the Python interpreter into an application written in C and use it as an extension or command language for that application.</p>
+    </section>
+    <section class="main-section" id="Prerequisites">
+      <header>Prerequisites</header>
+      <p>This tutorial is designed for programmers that are new to the Python language, not beginners who are new to programming. Thus, knowledge of coding fundamentals is not recommended, but rather essential.</p>
+    </section>
+    <section class="main-section" id="Installation_&_Setup">
+      <header>Installation & Setup</header>
+      <h3>Windows</h3>
+      <ol>
+        <li>Download Python</li>
+        <ul>
+          <li>Go to <a href="https://www.python.org/downloads/windows" target="_blank">https://www.python.org/downloads/windows</a></li>
+          <li>Click "Download Python 3.13.3"</li>
+        </ul>
+        <li>Run the Installer</li>
+        <ul>
+          <li>Check "Add Python to PATH"</li>
+          <li>Click "Install Now"</li>
+        </ul>
+        <li>Verify Installation</li>
+        <label style="display: block">Open Command Prompt and run:</label>
+        <code class="indent-left">python --version</code>
+      </ol>
+      
+      <h3>macOS</h3>
+      <ol>
+        <li>Download Python</li>
+        <ul>
+          <li>Go to <a href="https://www.python.org/downloads/mac-osx" target="_blank">https://www.python.org/downloads/mac-osx</a></li>
+          <li>Download the <span class="spaced-out">.pkg</span> installer</li>
+        </ul>
+        <li>Install Python</li>
+        <ul>
+          <li>Run the downloaded <span class="spaced-out">.pkg</span> file and follow the steps</li>
+        </ul>
+        <li>Verify Installation</li>
+        <label style="display: block">Open Terminal and run:</label>
+        <code class="indent-left">python3 --version</code>
+        <li>(Optional) Install pip packages:</li>
+        <code class="indent-left">python3 -m pip install &lt;package-name&gt;</code>
+      </ol>
+      
+      <h3>Linux (Ubuntu/Debian-based)</h3>
+      <ol>
+        <li>Install via apt (usually not the latest):</li>
+        <div class="indent-left">
+          <code>
+            sudo apt update
+            sudo apt install python3 python3-pip
+          </code>
+        </div>
+        <li>OR Build from source for latest version:</li>
+        <div class="indent-left">
+          <code>
+            sudo apt update
+            sudo apt install -y wget build-essential libssl-dev zlib1g-dev \
+              libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev \
+              libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev tk-dev
+            wget https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz
+            tar -xvf Python-3.13.3.tgz
+            cd Python-3.13.3
+            ./configure --enable-optimizations
+            make -j$(nproc)
+            sudo make altinstall
+          </code>
+        </div>
+        <li>Verify Installation</li>
+        <code class="indent-left">python3.13 --version</code>
+      </ol>
+    </section>
+    <section class="main-section" id="Getting_Started"> <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <header>Getting Started</header>
+      <p>Python is an interpreted language, which can save you considerable time during program development because no compilation and linking is necessary. The interpreter can be used interactively, which makes it easy to experiment with features of the language, to write throw-away programs, or to test functions during bottom-up program development. It is also a handy desk calculator.</p>
+      <p>The Python interpreter can be invoked in several ways. On Unix systems, it's typically installed as <span class="spaced-out">/usr/local/bin/python3.13</span>, allowing you to start it by typing python3.13 in the shell. On Windows, if Python is installed from the Microsoft Store, the python3.13 command becomes available. Alternatively, the py launcher can be used. To exit the interpreter, you can type <span class="spaced-out">quit()</span> or use the end-of-file character (<span class="spaced-out">Ctrl-D</span> on Unix, <span class="spaced-out">Ctrl-Z</span> on Windows).</p>
+      <p>The interpreter supports line-editing features like interactive editing, history substitution, and code completion on systems with the GNU Readline library. You can check if command-line editing is supported by typing <span class="spaced-out">Ctrl-P</span> at the Python prompt; if it beeps, editing is available.</p>
+      <p>Python can execute scripts from files, standard input, or command-line arguments. Using <span class="spaced-out">python -c 'command'</span> executes the given command, while <span class="spaced-out">python -m module</span> runs the specified module as a script. Adding the <span class="spaced-out">-i</span> option before a script keeps the interpreter in interactive mode after the script's execution.</p>
+      <p>In interactive mode, the interpreter prompts with >>> for new commands and ... for continuation lines. For instance:</p>
+      <div class="indent-left">
+        <code>
+          >>> the_world_is_flat = True
+          >>> if the_world_is_flat:
+          ...     print("Be careful not to fall off!")
+          ...     
+          Be careful not to fall off!
+        </code>
+      </div>
+      <p>By default, Python source files are encoded in UTF-8, supporting a wide range of characters. To specify a different encoding, include a special comment at the top of the file:</p>
+      <code class="indent-left"># -*- coding: encoding -*-
+      </code>
+    </section>
+    <section class="main-section" id="Core_Concepts">
+      <header>Core Concepts</header>
+      <ol>
+        <li>Data Types</li>
+        <p>Python has several built-in data types to represent different kinds of values.</p>
+        <table style="width: 500px">
+          <tr>
+            <th>Data Type</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>5</td>
+            <td>Integer number</td>
+          </tr>
+          <tr>
+            <td>float</td>
+            <td>3.71</td>
+            <td>Decimal number</td>
+          </tr>
+          <tr>
+            <td>str</td>
+            <td>"Hello Mars!"</td>
+            <td>String (text)</td>
+          </tr>
+          <tr>
+            <td>bool</td>
+            <td>True, False</td>
+            <td>Boolean value</td>
+          </tr>
+          <tr>
+            <td>NoneType</td>
+            <td>None</td>
+            <td>Represents no value</td>
+          </tr>
+        </table>
+        <div class="indent-left">
+          <code>
+            a = 10          # int
+            b = 3.5         # float
+            c = "Hello"     # str
+            d = True        # bool
+            e = None        # NoneType
+          </code>
+        </div>
+        <li>Data Structures</li>
+        <p>These are used to store collections of data.</p>
+        <p>List - Ordered, mutable</p>
+        <div class="indent-left">
+          <code>
+            fruits = ["apple", "banana", "cherry"]
+            fruits.append("orange")  # Add item
+            fruits.pop()  # Removes item
+            print(fruits[1])         # Access item
+          </code>
+        </div>
+        <p>Tuple - Ordered, immutable</p>
+        <div class="indent-left">
+          <code>
+            point = (3, 4)
+            print(point[0])
+          </code>
+        </div>
+        <p>Set - Unordered, unique items</p>
+        <div class="indent-left">
+          <code>
+            nums = {1, 2, 3, 2}
+            print(nums)  # Output: {1, 2, 3}
+          </code>
+        </div>
+        <p>Dictionary - Key-value pairs</p>
+        <div class="indent-left">
+          <code>
+            person = {"name": "Alice", "age": 30}
+            print(person["name"])
+            person["age"] = 31  # Update value
+          </code>
+        </div>
+        <li>Control Flow Statements</li>
+        <p>Used to make decisions and repeat code.</p>
+        <p>Conditional Statements</p>
+        <div class="indent-left">
+          <code>
+            x = 10
+            if x > 5:
+                print("x is greater than 5")
+            elif x == 5:
+                print("x is 5")
+            else:
+                print("x is less than 5")
+          </code>
+        </div>
+        <p>Loops</p>
+        <div class="indent-left">
+          <code>
+            for i in range(3):  # For loop
+              print(i)  
+
+
+            count = 0
+            while count < 3:    # While loop
+                print(count)
+                count += 1
+          </code>
+        </div>
+        <p>Break and Continue</p>
+        <div class="indent-left">
+          <code>
+            for i in range(5):
+            if i == 3:
+                break  # exits loop
+            print(i)
+
+
+            for i in range(5):
+            if i == 0:
+                continue  # skips first iteration
+            print(i)
+          </code>
+        </div>
+
+      </ol>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <p>The documentation in this page is taken from <a href="https://docs.python.org/3/tutorial/index.html">https://docs.python.org/</a></p>
+    </section>
+  </main>
+</body>
+</html>

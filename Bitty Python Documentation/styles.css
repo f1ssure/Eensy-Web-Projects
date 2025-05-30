@@ -1,0 +1,39 @@
+.spaced-out {
+    letter-spacing: 0.1rem;
+}
+
+.indent-left {
+    margin-left: 1rem;
+}
+
+header {
+    margin: 2rem 0 2rem;
+}
+
+code {
+    white-space: pre;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: solid rgba(0, 0, 0, 0.05) 1px;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+}
+
+tr:first-child {
+    background-color: rgba(127, 127, 127, 0.1);
+    border-bottom: none;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+/* Table ends */
