@@ -22,6 +22,11 @@ header {
     font-size: 1.25rem;
 }
 
+#navbar header {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
 #main-doc header {
     margin-top: 60px;
 }
@@ -35,13 +40,14 @@ ol > li {
 }
 
 #navbar > a {
+    margin-left: 1vw;
+    margin-right: 1vw;
     line-height: 2rem;
 }
 
 /* Laptops, Desktops and Tablets */
 #navbar {
    /* width: 15vw; */
-    margin: 0 2vw 0;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -85,7 +91,6 @@ ol > li {
         width: 90%;
         height: auto;
         position: static;
-        margin: 0 auto 3vh;
     }
 
     #nav-link {
