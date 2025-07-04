@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: "Funnel Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    margin: 3rem;
+}
+
+#header {
+    padding-left: 15px;
+    height: 60px;
+    background-color: rgba(250, 240, 230, 0.85);  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-img {
+    object-fit: contain;
+    max-height: 40px;
+}
+
+#nav-bar {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#nav-bar a {
+    font-size: 175%;
+}
+
+#nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* First section */
+#about-section {
+padding: 3rem 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.text {
+display: flex;
+justify-content: center;
+}
+
+#collection-heading {
+font-size: 2.5rem;
+margin-top: 2rem;
+}
+
+#clothing-name {
+    font-size: 10rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+#product {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10vh;
+}
+
+#product-image {
+    width: min(500px, 30vw);
+}
+
+#back-rectangle {
+    width: min(375px, 40vw);
+    height: 400px;
+    padding: 3vw;
+    position: relative;
+    right: 3vw;
+    background-color: rgba(250, 240, 230, 0.7);
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 50px rgba(130, 120, 110, 0.3);
+}
+
+#description-wrapper {
+    width: 20vw;
+}
+
+#product-description {
+    font-size: 175%;
+    font-family: Onest, "Funnel Sans", sans-serif;
+    line-height: 175%;
+}
+
+/* Second section */
+#attributes-section {
+    width: min(1000px, 65%);
+    padding: 5vh 0;
+    border-radius: 10% / 15%;
+    margin: auto;
+    background-color: Lavender;
+    margin-top: 2rem;
+}
+
+#attributes-list {
+    width: 80%;
+    margin: auto;
+    list-style: none;
+}
+
+.attribute-header {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.attribute-text {
+    font-size: 2rem;
+}
