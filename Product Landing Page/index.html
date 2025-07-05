@@ -16,17 +16,17 @@
 
   <body>
     <header id="header">
-      <img id="header-img" src="./logo.png" alt="Min Dou logo" width="75"/>
+      <img id="header-img" src="https://i.postimg.cc/7PM5DXQH/logo.png" alt="Min Dou logo" width="75"/>
       <nav id="nav-bar">
-        <a class="nav-link" href="#about-section">About</a>
-        <a class="nav-link">Main Attributes</a>
-        <a id="purchase-link" class="nav-link">Purchase</a>
+        <a class="nav-link" href="#about-section" tabindex="1">About</a>
+        <a class="nav-link" href="#attributes-section" tabindex="2">Main Attributes</a>
+        <a id="purchase-link" class="nav-link" href="#purchase-section" tabindex="3">Purchase</a>
       </nav>
     </header>
     <main>
       <section id="about-section">
         <div class="text">
-          <span id="collection-heading">Timeless Piece</span>
+          <span id="collection-heading">Timeless Pieces</span>
         </div>
         <div class="text">
           <span id="clothing-name">Essence within™ T-Shirt</span>
@@ -47,30 +47,40 @@
         <ul id="attributes-list">
           <li>
             <i class="fa-solid fa-leaf fa-5x"></i>
-            <header class="attribute-header">Sustainably Hand-Dyed</header>
+            <h2 class="attribute-header">Sustainably Hand-Dyed</h2>
             <p class="attribute-text">Each piece is individually dyed using low-impact, eco-friendly dyes—minimizing water waste and reducing environmental footprint.</p>
           </li>
           <li>
             <i class="fa-solid fa-star fa-5x"></i>
-            <header class="attribute-header">Premium Quality Guarantee</header>
+            <h2 class="attribute-header">Premium Quality Guarantee</h2>
             <p class="attribute-text">Crafted from high-grade, long-staple cotton for a soft, breathable feel that lasts—backed by strict quality checks at every stage.</p>
           </li>
           <li>
             <i class="fa-solid fa-eye fa-5x"></i>
-            <header class="attribute-header">One-of-a-Kind</header>
+            <h2 class="attribute-header">One-of-a-Kind</h2>
             <p class="attribute-text">Every shirt features a unique, subtle tie-dye pattern—no two are alike. Designed for effortless style that transcends seasons.</p>
           </li>
         </ul>
+        <div id="video-wrapper">
+          <h2 id="video-title">Peek Into The Manufacturing Process</h2>
+          <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZheLb4lK3Ys?si=5wNe9zx_kPm7XONv&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </section>
 
       <section id="purchase-section">
-
+        <div id="purchase-wrapper">
+          <h2 id="purchase-heading">How To Get It</h2>
+          <p>Currently, this T-Shirt is yet to be released as it is a part of the upcoming "Timeless Pieces" collection. <br> If you want to be among the first to get your hands on it, enter your E-Mail address below to be notified when it's available.</p>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <!-- -->
+            <input id="email" name= "email" type="email" placeholder="Enter your E-Mail address" />
+            <input id="submit" type="submit" /> 
+          </form>
+        </div>
       </section>
     </main>
   </body>
 
   <script>
-    const zoomImage = document.getElementById('product-image');
-
   </script>
 </html>

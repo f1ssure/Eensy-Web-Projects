@@ -7,22 +7,37 @@
     color: black;
 }
 
+body {
+    background-color: FloralWhite;
+}
+
+p {
+    font-size: 175%;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
 a {
     text-decoration: none;
 }
 
 li {
-    margin: 3rem;
+    margin: 5rem 0;
 }
 
 #header {
     padding-left: 15px;
     height: 60px;
-    background-color: rgba(250, 240, 230, 0.85);  
+    background-color: white;  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #header-img {
@@ -39,29 +54,37 @@ li {
 }
 
 #nav-bar a {
-    font-size: 175%;
+    font-size: 150%;
 }
 
 #nav-bar a:hover {
     text-decoration: underline;
 }
 
+#purchase-link {
+    color: White;
+    background-color: LightCoral;
+    padding: 12px;
+    border-radius: 20px;
+}
+
 /* First section */
 #about-section {
-padding: 3rem 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, White 25%, LightCoral);
 }
 
 .text {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #collection-heading {
-font-size: 2.5rem;
-margin-top: 2rem;
+    font-size: 2.5rem;
+    margin-top: 2rem;
 }
 
 #clothing-name {
@@ -86,7 +109,7 @@ margin-top: 2rem;
     padding: 3vw;
     position: relative;
     right: 3vw;
-    background-color: rgba(250, 240, 230, 0.7);
+    background-color: MistyRose;
     border-radius: 20%;
     display: flex;
     justify-content: center;
@@ -95,28 +118,27 @@ margin-top: 2rem;
 }
 
 #description-wrapper {
-    width: 20vw;
+    width: 85%;
 }
 
 #product-description {
-    font-size: 175%;
     font-family: Onest, "Funnel Sans", sans-serif;
     line-height: 175%;
 }
 
 /* Second section */
 #attributes-section {
-    width: min(1000px, 65%);
-    padding: 5vh 0;
-    border-radius: 10% / 15%;
-    margin: auto;
-    background-color: Lavender;
-    margin-top: 2rem;
+    background-color: SlateBlue;
+    padding: 10vh 0;
 }
 
 #attributes-list {
-    width: 80%;
+    width: min(1000px, 65%);
+    padding: 5vh;
+    border-radius: 10% / 15%;
     margin: auto;
+    background-color: Lavender;
+    margin-top: 5rem;
     list-style: none;
 }
 
@@ -124,10 +146,71 @@ margin-top: 2rem;
     display: inline-block;
     margin-left: 20px;
     margin-bottom: 1rem;
-    font-size: 4rem;
-    font-weight: bold;
 }
 
-.attribute-text {
-    font-size: 2rem;
+#video-wrapper {
+    width: min(1000px, 65%);
+    padding: 5vh;
+    margin: auto;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#video-title {
+    color: White;
+    font-size: 3rem;
+    font-style: italic;
+    margin: 2vw;
+    padding-bottom: 0.5vh;
+    border-bottom: solid 1.5px white;
+}
+
+#video {
+    width: 960px;
+    height: 540px;
+}
+
+/* Third section */
+#purchase-section {
+    background: repeating-linear-gradient(white, ivory 75px);
+}
+
+#purchase-wrapper {
+    width: 800px;
+    margin: auto;
+    padding: 10vh 0;
+}
+
+#purchase-heading {
+    margin-bottom: 15px;
+}
+
+#email {
+    width: 80%;
+    margin-top: max(5vh, 30px);
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px LightCoral;
+    display: block;
+}
+
+#email::placeholder {
+    color: LightCoral;
+    opacity: 0.5;
+}
+
+#submit {
+    padding: 10px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: LightCoral;
+    color: white;
+    font-size: 1.25rem;
+}
+
+
