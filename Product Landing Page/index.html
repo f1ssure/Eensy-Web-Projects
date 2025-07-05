@@ -20,7 +20,7 @@
       <nav id="nav-bar">
         <a class="nav-link" href="#about-section" tabindex="1">About</a>
         <a class="nav-link" href="#attributes-section" tabindex="2">Main Attributes</a>
-        <a id="purchase-link" class="nav-link" href="#purchase-section" tabindex="3">Purchase</a>
+        <a id="purchase-link" class="nav-link" href="#purchase-section" tabindex="3">Pre-Order</a>
       </nav>
     </header>
 
@@ -33,7 +33,7 @@
           <span id="clothing-name">Essence within™ <br id="name-br"> T-Shirt</span>
         </div>
         <div id="product">
-          <img id="product-image" src="./product.png" alt="Min Dou T-Shirt Picture" />
+          <img id="product-image" src="./product.png" alt="Min Dou T-Shirt Picture" loading="lazy" />
           <div id="back-rectangle">
             <div id="description-wrapper">
               <p id="product-description">Effortless color, elevated simplicity. This premium, hand-dyed shirt blends subtle tie-dye tones with a clean, minimal silhouette—crafted for those who appreciate quiet detail and timeless comfort.</p>
@@ -89,5 +89,12 @@
   </body>
 
   <script>
+
+    console.log('script started');
+    let icons = document.getElementsByClassName('text');
+    for (icon in icons) {
+      console.log(icon.className);
+    }
+
   </script>
 </html>

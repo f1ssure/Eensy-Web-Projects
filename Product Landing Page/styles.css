@@ -137,7 +137,7 @@ a {
 
 #attributes-list {
     width: min(1000px, 65%);
-    padding: 5vh;
+    padding: calc(10vh + 3rem);
     border-radius: 15% / 22.5%;
     margin: auto;
     background-color: Lavender;
@@ -147,8 +147,7 @@ a {
 
 .attribute-header {
     display: inline-block;
-    margin-left: 20px;
-    margin-bottom: 1rem;
+    margin: 3rem 0;
 }
 
 #video-wrapper {
@@ -279,6 +278,7 @@ footer p {
     
     #attributes-list {
         border-radius: 20% / 15%;
+        padding: 8vh;
     }
 
     .attribute-header {
@@ -358,6 +358,7 @@ footer p {
 
     #attributes-list {
         border-radius: 25% / 10%;
+        padding: 4vh;
     }
 
     .attribute-header {
