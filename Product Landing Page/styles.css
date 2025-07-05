@@ -23,13 +23,17 @@ a {
     text-decoration: none;
 }
 
-li {
-    margin: 5rem 0;
+#nav-bar a, li a {
+    font-size: 150%;
+}
+
+#nav-bar a:hover, li a {
+    text-decoration: underline;
 }
 
 #header {
     padding-left: 15px;
-    height: 60px;
+    height: 55px;
     background-color: white;  
     display: flex;
     flex-direction: row;
@@ -53,14 +57,6 @@ li {
     align-items: center;
 }
 
-#nav-bar a {
-    font-size: 150%;
-}
-
-#nav-bar a:hover {
-    text-decoration: underline;
-}
-
 #purchase-link {
     color: White;
     background-color: LightCoral;
@@ -80,6 +76,7 @@ li {
 .text {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #collection-heading {
@@ -93,14 +90,20 @@ li {
     margin: 2rem 0;
 }
 
+#name-br {
+    display: none;
+}
+
 #product {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     margin: 10vh;
 }
 
 #product-image {
-    width: min(500px, 30vw);
+    min-width: 500px;
+    margin-right: 5vw;
 }
 
 #back-rectangle {
@@ -135,7 +138,7 @@ li {
 #attributes-list {
     width: min(1000px, 65%);
     padding: 5vh;
-    border-radius: 10% / 15%;
+    border-radius: 15% / 22.5%;
     margin: auto;
     background-color: Lavender;
     margin-top: 5rem;
@@ -176,6 +179,7 @@ li {
 /* Third section */
 #purchase-section {
     background: repeating-linear-gradient(white, ivory 75px);
+    padding: 10vh 0;
 }
 
 #purchase-wrapper {
@@ -184,7 +188,7 @@ li {
     padding: 10vh 0;
 }
 
-#purchase-heading {
+#purchase-headidng {
     margin-bottom: 15px;
 }
 
@@ -214,3 +218,158 @@ li {
 }
 
 
+footer {
+    background-color: DarkSlateGray;
+    margin-bottom: 0;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul, footer p {
+    display: flex;
+    width: 40vw;
+    justify-content: flex-end;
+    line-height: 2.5rem;
+    margin: auto;
+    list-style: none;
+    margin-bottom: 20px;
+
+}
+
+footer ul li {
+    margin-left: 10px;
+}
+
+footer ul li a, footer p {
+    color: linen;
+}
+
+footer p {
+    font-weight: 100;
+    text-align: right;
+}
+
+@media (max-width: 960px) {
+    #header {
+        padding: 0;
+    }
+
+    #clothing-name {
+        font-size: 7.5rem;
+    }
+
+    #product {
+        margin: auto;
+        flex-direction: column;
+    }
+
+    #product-image {
+        margin-right: 0;
+        margin-bottom: 5vh;
+        width: 70%;
+    }
+
+    #back-rectangle {
+        right: 0;
+        width: 70%;
+        height: 300px;
+        border-radius: 10% / 22.5%;
+    }
+    
+    #attributes-list {
+        border-radius: 20% / 15%;
+    }
+
+    .attribute-header {
+        font-size: 2.5rem;
+    }
+
+    #video {
+        width: 480px; 
+        height: 270px;
+    }
+
+    #purchase-wrapper {
+        width: 80%;
+    }
+
+    footer {
+        padding: 5vw 0;
+    }
+
+    footer ul, footer p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 580px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 125%;
+    }
+
+    i {
+        display: none;
+    }
+
+    #header {
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-evenly;
+    }
+
+    #header-img {
+        margin: 5px 0;
+    }
+
+    #nav-bar a {
+        margin: 0 10px;
+        font-size: 1.15rem;
+    }
+
+    #purchase-link {
+        background-color: LightCoral;
+        padding: 6px;
+        border-radius: 20px;
+    }
+
+    #clothing-name {
+        font-size: 8rem;
+        line-height: 100%;
+        margin-bottom: 40px;
+    }
+
+    #name-br {
+        display: block;
+    }
+
+    #product-image {
+        min-width: 300px;
+        width: 300px;
+    }
+
+    #back-rectangle {
+        height: 200px;
+    }
+
+    #attributes-list {
+        border-radius: 25% / 10%;
+    }
+
+    .attribute-header {
+        font-size: 1.75rem;
+    }
+
+    #video {
+        width: 320px; 
+        height: 180px;
+    }
+
+    footer {
+        padding: 5vw 0;
+    }
+}
