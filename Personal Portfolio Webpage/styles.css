@@ -1,0 +1,51 @@
+:root {
+    --main-darkest: #222831;
+    --main-darker: #393E46;
+    --secondary-darker: #948979;
+    --secondary-lighter: #DFD0B8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+#navbar {
+    height: 40px;
+    background-color: var(--main-darker);
+}
+
+
+/* Welcome section contents */
+#welcome-section {
+    height: 100vh;
+    background-color: var(--main-darkest);
+    color: LightGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gradient-bg {
+    font-family: 'Lexend Tera', Helvetica;
+}
+
+#welcome-section h1 {
+    font-weight: initial;
+    font-size: 2rem;
+}
+
+#gradient-bg p {
+    float: left;
+}
+
+#name-box {
+    display: inline-block;
+}
+
+#name {
+    font-family: 'Gabarito';
+    font-size: 10rem;
+}
