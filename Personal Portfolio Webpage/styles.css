@@ -3,6 +3,7 @@
     --main-darker: #393E46;
     --secondary-darker: #948979;
     --secondary-lighter: #DFD0B8;
+    --text-main-color: LightGray;
 }
 
 * {
@@ -11,9 +12,15 @@
     padding: 0;
 }
 
+a {
+    color: var(--text-main-color); 
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Navbar styling */
 #navbar {
-    height: 40px;
+    height: 48px;
     background-color: var(--main-darker);
 }
 
@@ -22,13 +29,10 @@
 #welcome-section {
     height: 100vh;
     background-color: var(--main-darkest);
-    color: LightGray;
+    color: var(--text-main-color);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#gradient-bg {
     font-family: 'Lexend Tera', Helvetica;
 }
 
@@ -37,15 +41,22 @@
     font-size: 2rem;
 }
 
-#gradient-bg p {
+#welcome-section p {
     float: left;
 }
 
 #name-box {
     display: inline-block;
+    background: linear-gradient(
+        90deg,
+        RebeccaPurple,
+        LightCoral
+    );
+    background-clip: text;
 }
 
 #name {
     font-family: 'Gabarito';
     font-size: 10rem;
+    color: rgba(211, 211, 211, 0.5);
 }
