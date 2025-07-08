@@ -145,8 +145,16 @@ a {
     list-style: none;
 }
 
+.icon {
+    display: inline-block;
+    margin-right: 2rem;
+    width: 3.5vw;
+}
+
 .attribute-header {
     display: inline-block;
+    width: 80%;
+    font-size: 3.5rem;
     margin: 3rem 0;
 }
 
@@ -359,6 +367,10 @@ footer p {
     #attributes-list {
         border-radius: 25% / 10%;
         padding: 4vh;
+    }
+    
+    .icon {
+        display: none;
     }
 
     .attribute-header {
