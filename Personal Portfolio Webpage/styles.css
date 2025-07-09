@@ -10,22 +10,43 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
+}
+
+body {
+    background-color: var(--main-darkest);
+    color: var(--text-main-color);
 }
 
 /* Navbar styling */
 #navbar {
     height: 48px;
-    background-color: var(--main-darker);
+    background-color: rgba(57, 62, 70, 0.9);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -0.1px;
+}
+
+#links {
+    margin: auto;
+    width: 17rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #navbar a {
     color: var(--text-main-color); 
     text-decoration: none;
-    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Jost', 'Inter', Helvetica, Arial, sans-serif;
 }
 
+#navbar a:hover {
+    text-decoration: underline;
+    color: LightCoral;
+}
 
-/* Welcome section contents */
+/* Welcome section */
 #welcome-section {
     height: 100vh;
     background-color: var(--main-darkest);
@@ -48,7 +69,7 @@
 #name-box {
     display: inline-block;
     background: linear-gradient(
-        90deg,
+        45deg,
         RebeccaPurple,
         LightCoral
     );
@@ -58,5 +79,31 @@
 #name {
     font-family: 'Gabarito', Helvetica;
     font-size: 10rem;
-    color: rgba(211, 211, 211, 0.5);
+    color: rgba(211, 211, 211, 0.25);
+}
+
+/* Projects section */
+#projects {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        LightPink,
+        LightCoral
+    );
+}
+
+#project-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-tile {
+    margin: 30px;
+    height: 15rem;
+    width: 13rem;
+    border-radius: 10%;
+    background-color: WhiteSmoke;
 }
