@@ -12,16 +12,16 @@
     padding: 0;
 }
 
-a {
-    color: var(--text-main-color); 
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-}
-
 /* Navbar styling */
 #navbar {
     height: 48px;
     background-color: var(--main-darker);
+}
+
+#navbar a {
+    color: var(--text-main-color); 
+    text-decoration: none;
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 
@@ -56,7 +56,7 @@ a {
 }
 
 #name {
-    font-family: 'Gabarito';
+    font-family: 'Gabarito', Helvetica;
     font-size: 10rem;
     color: rgba(211, 211, 211, 0.5);
 }
