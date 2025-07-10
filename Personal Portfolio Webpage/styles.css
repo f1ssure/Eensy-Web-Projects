@@ -97,6 +97,7 @@ body {
 #projects h1 {
     font-family: 'Gabarito', Helvetica;
     font-weight: initial;
+    margin-bottom: 15px;
 }
 
 #project-tiles {
@@ -106,7 +107,7 @@ body {
 }
 
 .project-tile {
-    margin: 30px;
+    margin: 35px;
     height: 16rem;
     width: 14rem;
     border-radius: 10%;
@@ -145,4 +146,69 @@ body {
 /* Contacts section */
 #contacts {
     height: 500px;
+    padding-top: 125px;
+    border-top: solid 1.5rem var(--secondary-darker);
+    font-family: Jost;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacts p {
+    font-size: 125%;
+}
+
+#icons {
+    margin-top: 100px;
+    width: min(25rem, 100vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon {
+    transform: scale(5);
+}
+
+.icon a {
+    color: var(--text-main-color);
+}
+
+.icon a svg:hover {
+    color: var(--secondary-lighter);
+}
+
+
+
+@media (max-width: 700px) {
+    #welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    #welcome-section p {
+        float: none;
+    }
+
+    #name {
+        font-size: 7.5rem;
+    }
+
+    #icons {
+        justify-content: space-evenly;
+    }
+
+    .icon {
+        transform: scale(3.75);
+    }
+}
+
+@media (max-width: 500px) {
+    #welcome-section h1 {
+        font-size: 1.25rem;
+    }
+
+    #name {
+        font-size: 5rem;
+    }
 }
