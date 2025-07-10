@@ -25,7 +25,8 @@ body {
     display: flex;
     align-items: center;
     position: sticky;
-    top: -0.1px;
+    top: -0.5px;
+    backdrop-filter: blur(3px);
 }
 
 #links {
@@ -86,12 +87,16 @@ body {
 #projects {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(
-        LightPink,
-        LightCoral
-    );
+    background-color: var(--main-darker); 
+    padding: 2rem 0;
+}
+
+#projects h1 {
+    font-family: 'Gabarito', Helvetica;
+    font-weight: initial;
 }
 
 #project-tiles {
@@ -102,8 +107,13 @@ body {
 
 .project-tile {
     margin: 30px;
-    height: 15rem;
-    width: 13rem;
+    height: 16rem;
+    width: 14rem;
     border-radius: 10%;
-    background-color: WhiteSmoke;
+    background-color: var(--secondary-lighter);
+}
+
+/* Contacts section */
+#contacts {
+    height: 500px;
 }
