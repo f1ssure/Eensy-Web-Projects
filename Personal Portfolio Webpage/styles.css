@@ -1,7 +1,7 @@
 :root {
     --main-darkest: #222831;
     --main-darker: #393E46;
-    --secondary-darker: #948979;
+    --secondary-darker: #D2BD9C;
     --secondary-lighter: #DFD0B8;
     --text-main-color: LightGray;
 }
@@ -11,6 +11,10 @@
     margin: 0;
     padding: 0;
     border: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -98,6 +102,8 @@ body {
     font-family: 'Gabarito', Helvetica;
     font-weight: initial;
     margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: solid 1.5px var(--text-main-color);
 }
 
 #project-tiles {
@@ -112,11 +118,20 @@ body {
     width: 14rem;
     border-radius: 10%;
     background-color: var(--secondary-lighter);
+    background: linear-gradient(
+        var(--secondary-darker),
+        var(--secondary-lighter),
+        var(--text-main-color)
+    );
     color: var(--main-darkest);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.project-tile:hover {
+    background-color: rgba(210, 189, 156, 0.5);
 }
 
 .project-img {
@@ -194,6 +209,14 @@ body {
         font-size: 7.5rem;
     }
 
+    #projects h1 {
+        font-size: 1.3rem;
+    }
+
+    #contacts p {
+        font-size: 115%;
+    }
+
     #icons {
         justify-content: space-evenly;
     }
@@ -210,5 +233,13 @@ body {
 
     #name {
         font-size: 5rem;
+    }
+
+    #projects h1 {
+        font-size: 1.2rem;
+    }
+
+    #contacts p {
+        font-size: 107.5%;
     }
 }
