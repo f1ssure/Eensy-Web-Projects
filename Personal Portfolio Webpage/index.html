@@ -37,7 +37,7 @@
         <div class='project-tile'>
           <div class='project-img'>
             <a href='https://github.com/f1ssure/Flappy-Bird'>
-              <img src='./flappy.png' alt='Flappy Bird game entry scene' />
+              <img src='./photos/flappy.png' alt='Flappy Bird game entry scene' />
             </a>
           </div>
           <div class='img-caption'>
@@ -49,7 +49,7 @@
         <div class='project-tile'>
           <div class='project-img'>
             <a href='https://github.com/f1ssure/Eensy-Web-Projects'>
-              <img src='./python.png' alt='Python Documentation project' />
+              <img src='./photos/python.png' alt='Python Documentation project' />
             </a>
           </div>
           <div class='img-caption'>
@@ -61,7 +61,7 @@
         <div class='project-tile'>
           <div class='project-img'>
             <a href='https://github.com/f1ssure/Eensy-Web-Projects'>
-              <img src='./landing.png' alt='Product Landing page photo' />
+              <img src='./photos/landing.png' alt='Product Landing page photo' />
             </a>
           </div>
           <div class='img-caption'>
@@ -73,7 +73,7 @@
         <div class='project-tile'>
           <div class='project-img'>
             <a href='https://github.com/f1ssure/Caesar-cipher'>
-              <img src='./caesar.png' alt='Python script to encipher or decipher Caesar ciphertext.' />
+              <img src='./photos/caesar.png' alt='Python script to encipher or decipher Caesar ciphertext.' />
             </a>
           </div>
           <div class='img-caption'>
@@ -114,16 +114,50 @@
 
   <script>
 
+    // adjust #project-tiles width so that tiles wrap around, but also align left & whole container can be centered
+    const projectTiles = document.getElementById('project-tiles');
+
+    function remToPx(rem) {
+      console.log();
+      const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      return rem * rootFontSize;
+    }
+
+    const tileWidth = remToPx(14) + 70; 
+    const tilesFit = Math.min(Math.floor(window.innerWidth / tileWidth), 4);
+    projectTiles.style.width = String(tileWidth * tilesFit) + 'px';
+    console.log(tileWidth + ' * ' + tilesFit + ' = ' + tileWidth * tilesFit);
+
+
     // highlight nav-links if the user is at a certain position in the document
     const sections = document.querySelectorAll('section');
     let positions = [];
-    for (i in sections) {
-      const rect = sections[i].getBoundingClientRect(); 
-      const posY = rect.top + window.scrollY;
+    for (section of sections) {
+      const rect = section.getBoundingClientRect(); 
+      const posY = (rect.top + rect.bottom) / 2;
       positions.push(posY);
     }
 
+    let lastModified = undefined;
+    const navLinks = document.getElementsByClassName('nav-link');
+    document.addEventListener('scroll', () => {
+      const userPos = window.scrollY + window.innerHeight;
+      for (let i = positions.length - 1; i >= 0; i--) {
+        if (userPos >= positions[i]) {
+          navLinks[i].style.textDecoration = 'underline';
+          navLinks[i].style.color = 'LightCoral';
 
+          // reset last highlighted nav-link
+          if (lastModified != undefined && (lastModified != navLinks[i] || window.scrollY < 48)) {
+            lastModified.style.textDecoration = 'none';
+            lastModified.style.color = 'var(--text-main-color)';
+          }
+
+          lastModified = navLinks[i];
+          break;
+        }
+      }
+    });
 
   </script>
 </html>
