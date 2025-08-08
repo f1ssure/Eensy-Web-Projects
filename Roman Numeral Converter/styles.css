@@ -1,0 +1,52 @@
+:root {
+    --deep-sea: #1B3C53;
+    --shallow-sea: #456882;
+    --skin-sand: #D2C1B6;
+    --white-sand: #F9F3EF;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--deep-sea);
+    color: #EFEFEF;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    font-size: 1.15rem;
+}
+
+#gradient-box {
+    background: linear-gradient(
+        var(--deep-sea),
+        var(--shallow-sea)
+    );
+
+    background-clip: text;
+}
+
+#gradietn-box h1 {
+    background-clip: text;
+}
+
+#main-content div {
+    
+}
+
+.number-field {
+    background-color: var(--white-sand);
+    padding: 5px;
+}
+
+#convert-btn {
+    background-color: var(--white-sand);
+    padding: 5px;
+}
