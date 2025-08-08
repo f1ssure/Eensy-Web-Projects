@@ -5,14 +5,27 @@
     --white-sand: #F9F3EF;
 }
 
-
 * {
     box-sizing: border-box;
 }
 
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(./roman-numerals-table.png) no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    opacity: 0.075;
+    z-index: -1;
+}
+
 body {
     background-color: var(--deep-sea);
-    color: #EFEFEF;
+    color: var(--white-sand);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -21,32 +34,41 @@ body {
 }
 
 main {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4% / 10%;
     font-size: 1.15rem;
+    padding: 2rem;
 }
 
 #gradient-box {
     background: linear-gradient(
-        var(--deep-sea),
-        var(--shallow-sea)
+        -90deg,
+        var(--shallow-sea),
+        #9198e5
     );
-
     background-clip: text;
+    -webkit-background-clip: text;
 }
 
-#gradietn-box h1 {
-    background-clip: text;
+#gradient-box h1 {
+    color: rgba(255, 255, 255, 0.1);
 }
 
-#main-content div {
-    
+#main-content div * {
+    background-color: lavender;
+    border-color: var(--shallow-sea);
+    padding: 5px;
+}
+
+#main-content div *:hover {
+    background-color: var(--white-sand);
 }
 
 .number-field {
-    background-color: var(--white-sand);
-    padding: 5px;
+    border-radius: 2.5% / 15%;
 }
 
 #convert-btn {
-    background-color: var(--white-sand);
-    padding: 5px;
+    border-radius: 7.5% / 15%;
 }
+
