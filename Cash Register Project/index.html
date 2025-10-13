@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' name='charset' />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <title>Cash Register Project</title>
+    <link rel='stylesheet' href='./styles.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+      <div id='heading'>
+        <div id='reference-caption'>
+          <a href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/build-a-cash-register-project/build-a-cash-register' target='_blank'><span>freeCodeCamp's</span></a>
+        </div>
+        <h1>Cash Register Project</h1>
+        <p>by <a href='https://f1ssure.github.io/' target='_blank'>f1ssure</a></p>
+      </div>
+
+      <div id='sections'>
+        <div class='section left-section'>
+          <div>
+            <div id='price-div'>
+              <h2>Item price:</h2>
+              <div id='price'>$20.0</div>
+            </div>
+            <p style='margin-bottom: 2.5px;'>Enter cash from the customer:</p>
+            <input id='cash'
+                   type='number'
+                   min='0'
+                   placeholder='0'></input>
+            <button id='purchase-btn'>Purchase</button>
+          </div>
+        </div>
+        <div class='section right-section'>
+          <h2>Change due:</h2>
+          <div id='output'>
+            <p id='output-status'>Status: <span id='status-keyword'>NONE</span></p>
+            <div id='change-due'></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src='./script.js'></script>
+  </body>
+</html>
