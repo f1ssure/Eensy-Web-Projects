@@ -40,14 +40,15 @@ main {
 
 #fCC {
     margin-bottom: -7px;
+    display: flex;
+    align-items: center;
 }
 
-#fCC::after {
-    content: "";
-    background-image: url("https://github.com/f1ssure/Eensy-Web-Projects/blob/main/RPG%20Creature%20Search%20App/fcc.png?raw=true") / "freeCodeCamp logo";
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
+#fCC-icon {
+    display: inline;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 2px 0 0 3px;
 }
 
 #developer {
