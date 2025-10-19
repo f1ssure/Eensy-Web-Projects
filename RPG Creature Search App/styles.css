@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: rgba(20, 20, 35, 1);
+    background-color: rgba(20, 20, 35, 0.8);
+    background: url("https://github.com/f1ssure/Eensy-Web-Projects/blob/main/RPG%20Creature%20Search%20App/wallpaper");
     display: flex;
     justify-content: center;
     align-items: center;
