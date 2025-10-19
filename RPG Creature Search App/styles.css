@@ -38,8 +38,16 @@ main {
     justify-content: center;
 }
 
+#fCC {
+    margin-bottom: -7px;
+}
+
+#fCC::after {
+    /*content: url()*/
+}
+
 #developer {
-    margin-top: -5px;
+    margin-top: -7px;
 }
 
 #sections {
@@ -115,6 +123,10 @@ a {
 
 #search-button:active {
     outline: 2px ridge #4389A2;
+}
+
+#creature-id {
+    color: rgba(0, 0, 0, 0.25);
 }
 
 #weight-and-height {
