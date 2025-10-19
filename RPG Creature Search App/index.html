@@ -1,1 +1,62 @@
-
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>RPG Creature Search App</title>
+    <link rel='stylesheet' href='styles.css' />
+</head>
+<body>
+    <main>
+        <h1><span class="title-decoration">//</span>RPG Creature Search App<span class="title-decoration">//</span></h1>
+        <p id="developer"><a href="https://f1ssure.github.io">composed by f1ssure</a></p>
+        <div id="left-section">
+            <div>
+                <div>
+                    <input id="search-input" type="text" />
+                    <button id="search-button">Search</button>
+                </div>
+                <h2 id="creature-name"><span id="creature-id"></span></h2>
+                <div id="weight-and-height">
+                    <p>Weight: <span id="weight"></span></p>
+                    <p>Height: <span id="height"></span></p>
+                    <div></div>
+                </div>
+                <div id="types"></div>
+            </div>
+        </div>
+        <div id="right-section">
+            <table>
+                <tr>
+                    <th>Base</th>
+                    <th>Stats</th>
+                </tr>
+                <tr>
+                    <td class="stat-name">HP:</td>
+                    <td id="hp" class="stat-value"></td>
+                </tr>
+                <tr>
+                    <td class="stat-name">Attack:</td>
+                    <td id="attack" class="stat-value"></td>
+                </tr>
+                <tr>
+                    <td class="stat-name">Defense:</td>
+                    <td id="defense" class="stat-value"></td>
+                </tr>
+                <tr>
+                    <td class="stat-name">Sp. Attack:</td>
+                    <td id="special-attack" class="stat-value"></td>
+                </tr>
+                <tr>
+                    <td class="stat-name">Sp. Defense:</td>
+                    <td id="special-defense" class="stat-value"></td>
+                </tr>
+                <tr>
+                    <td class="stat-name">Speed:</td>
+                    <td id="speed" class="stat-value"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
