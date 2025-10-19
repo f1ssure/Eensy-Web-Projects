@@ -5,41 +5,59 @@
 }
 
 body {
-    background-color: rgba(20, 20, 35, 0.8);
-    background: url("https://github.com/f1ssure/Eensy-Web-Projects/blob/main/RPG%20Creature%20Search%20App/wallpaper");
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("https://github.com/f1ssure/Eensy-Web-Projects/blob/main/RPG%20Creature%20Search%20App/wallpaper.jpg?raw=true");
     height: 100vh;
+    font-family: Jost, Arial, Helvetica, sans-serif;
 }
 
 main {
-    border: solid 10px white;
-    background-color: lavender;
+    background-color: rgba(20, 20, 35, 0.7);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    border: solid 10px rgba(235, 235, 235, 0.75);
+    background-color: rgba(230, 230, 250, 0.75);
     height: 500px;
     width: 800px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-and-creator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#developer {
+    margin-top: -5px;
+}
+
+#sections {
+    width: 70%;
+    margin: 3rem 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-h1 {
-    position: absolute;
-    top: 30%;
-}
-
 .title-decoration {
     font-weight: 100;
     font-size: 3rem;
     margin: 0 5px 0 8px;
-    
 }
 
 #developer {
-    position: absolute;
-    top: 35%;
     background: #5C258D;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -60,6 +78,45 @@ a {
     align-items: center;
 }
 
+#left-section {
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+
+#search-utilities {
+    margin: 0.15rem 0 1rem 0;
+}
+
+#search-input {
+    border-radius: 5px;
+    border: none;
+    padding: 0.15rem 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+#search-input:hover {
+    outline: 1px ridge #4389A2;
+}
+
+#search-input:focus {
+    outline: 2px ridge #4389A2;
+}
+
+#search-button {
+    border-radius: 5px;
+    border: none;
+    padding: 0.15rem;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+#search-button:hover {
+    outline: 1px ridge #4389A2;
+}
+
+#search-button:active {
+    outline: 2px ridge #4389A2;
+}
+
 #weight-and-height {
     display: flex;
     justify-content: space-between;
@@ -76,4 +133,23 @@ a {
     visibility: visible;
     opacity: 1;
     transition: all 1s;
+}
+
+tbody tr:nth-child(1) {
+}
+
+td {
+    background-color: #4389A2;
+    border-radius: 5px;
+    color: lavender;
+    padding: 10px;
+    line-height: 1rem;
+}
+
+.stat-name {
+    font-style: italic;
+}
+
+.stat-value {
+    width: 50px;
 }
