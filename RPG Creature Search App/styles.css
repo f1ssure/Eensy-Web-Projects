@@ -138,8 +138,26 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
+#types {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+}
+
+.type {
+    background-color: lavender;
+    width: 75px;
+    padding: 5px;
+    margin: 5px;
+    font-size: small;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* For hiding / showing elements */
 .hidden {
     visibility: none;
     opacity: 0;
@@ -151,9 +169,7 @@ a {
     opacity: 1;
     transition: all 1s;
 }
-
-tbody tr:nth-child(1) {
-}
+/* end */
 
 td {
     background-color: #4389A2;
