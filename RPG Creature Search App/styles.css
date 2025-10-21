@@ -32,6 +32,7 @@ main {
 }
 
 #title-and-creator {
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,7 +85,7 @@ a {
 }
 
 #left-section, #right-section {
-    width: 290px;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -96,6 +97,14 @@ a {
     padding-top: 10px;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+#left-section-content {
+    width: 100%;
+}
+
+#right-section {
+    height: max-content;
 }
 
 #search-utilities {
@@ -192,4 +201,132 @@ td {
 .stat-value {
     width: 70px;
     text-align: center;
+}
+
+/* Different styling for each type */
+.normal {
+  background-color: #b7b7aa;
+}
+
+.fire {
+  background-color: #ff6f52;
+}
+
+.water {
+  background-color: #42a1ff;
+}
+
+.electric {
+  background-color: #fecc33;
+}
+
+.grass {
+  background-color: #78cc55;
+}
+
+.ice {
+  background-color: #66ccfe;
+}
+
+.fighting {
+  background-color: #d3887e;
+}
+
+.poison {
+  background-color: #c68bb7;
+}
+
+.ground {
+  background-color: #dfba52;
+}
+
+.flying {
+  background-color: #8899ff;
+}
+
+.psychic {
+  background-color: #ff66a3;
+}
+
+.bug {
+  background-color: #aabb23;
+}
+
+.rock {
+  background-color: #baaa66;
+}
+
+.ghost {
+  background-color: #9995d0;
+}
+
+.dragon {
+  background-color: #9e93f1;
+}
+
+.dark {
+  background-color: #b59682;
+}
+
+.steel {
+  background-color: #abaabb;
+}
+
+.fairy {
+  background-color: #ed99ed;
+}
+/* end */
+
+@media (max-width: 850px) {
+    :root {
+        font-size: 14px;
+    }
+
+    #content {
+        width: 90vw;
+    }
+
+    #sections {
+        width: 80%;
+    }
+}
+
+@media (max-width: 540px) {
+    :root {
+        font-size: 12px;
+    }
+
+    #title-and-creator h1 {
+        font-size: 1.85rem;
+    }
+
+    .title-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    #content {
+        height: auto;
+        padding: 2rem 0 15rem;
+    }
+
+    #sections {
+        flex-direction: column;
+    }
+
+    #left-section {
+        align-items: center;
+        min-height: 210px;
+        width: min(290px, 90vw);
+        margin-bottom: 30px;
+    }
+
+    #left-section-content {
+        width: 80%;
+    }
+
+    .type {
+        width: 65px;
+    }
 }
