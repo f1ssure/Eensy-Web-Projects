@@ -56,7 +56,8 @@ main {
 }
 
 #sections {
-    width: 75%;
+    width: 70%;
+    height: 290px;
     margin: 1.5rem 0 3rem;
     display: flex;
     flex-direction: row;
@@ -83,7 +84,7 @@ a {
 }
 
 #left-section, #right-section {
-    width: 50%;
+    width: 290px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -94,6 +95,7 @@ a {
 #left-section {
     padding-top: 10px;
     justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #search-utilities {
@@ -143,6 +145,7 @@ a {
 
 #special-description {
     margin-bottom: 5px;
+    width: 100%;
 }
 
 #types {
@@ -165,13 +168,12 @@ a {
 .hidden {
     visibility: none;
     opacity: 0;
-    transition: all 1s;
 }
 
 .visible {
     visibility: visible;
     opacity: 1;
-    transition: all 1s;
+    transition: all 0.25s;
 }
 /* end */
 

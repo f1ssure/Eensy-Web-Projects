@@ -13,11 +13,14 @@ const defense = document.getElementById('defense');
 const specialAttack = document.getElementById('special-attack');
 const specialDefense = document.getElementById('special-defense');
 const speed = document.getElementById('speed');
+const searchResults = document.getElementById('search-results');
 
 const creatureListUrl = "https://rpg-creature-api.freecodecamp.rocks/api/creatures";
 const creatureDataUrl = "https://rpg-creature-api.freecodecamp.rocks/api/creature/{name-or-id}";
 
 const creatures = [];
+
+searchResults.classList.toggle("hidden");
 
 const populateCreaturesArr = (data) => {
     data.forEach((element) => {
@@ -57,6 +60,10 @@ const fetchCreature = async (value) => {
 }
 
 const displayCreatureInfo = (info) => {
+    if (searchResults.classList.contains("hidden")) {
+        searchResults.classList.toggle("hidden");
+        searchResults.classList.toggle("visible");
+    }
     const { id, name, weight: Weight, height: Height } = info;
     creatureName.innerHTML = name + ` <span id="creature-id">#${id}</span>`;
     weight.textContent = Weight;
@@ -72,7 +79,8 @@ const displayCreatureInfo = (info) => {
         const { base_stat, name } = stat;
         window[name].textContent = base_stat;
     });
-
+    
+    types.innerHTML = "";
     typeList.forEach((type) => {
         const { name: typeName } = type;
         types.innerHTML += `
@@ -81,11 +89,23 @@ const displayCreatureInfo = (info) => {
     });
 };
 
+const showSearchResults = () => {
+    if (searchResults.classList.contains("hidden")) {
+        searchResults.classList.toggle("hidden");
+        searchResults.classList.toggle("visible");
+    }
+}
+
+const hideSearchResults = () => {
+    if (!searchResults.classList.contains("hidden")) {
+        searchResults.classList.toggle("hidden");
+        searchResults.classList.toggle("visible");
+    }
+};
+
 const searchForCreature = (value) => {
-    if (Number.isNaN(value)) {
+    if (isNaN(value)) {
         value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
-        // TODO: FIX BUG WITH "florASPINE" as value
-        console.log(value);
         const found = creatures.find((el) => el.name === value);
         if (found) {
             fetchCreature(value).then(creatureInfo => {
@@ -93,6 +113,7 @@ const searchForCreature = (value) => {
             });
         } else {
             alert("Creature not found");
+            hideSearchResults();
         }
     } else {
         let target = Number(value);
@@ -112,11 +133,13 @@ const searchForCreature = (value) => {
             }
         }
         alert("Creature not found");
+        hideSearchResults();
     }
 };
 
 const processNewSearch = () => {
-    const value = searchInput.value;
+    hideSearchResults();
+    let value = searchInput.value;
     searchForCreature(value);
 };
 
