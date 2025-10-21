@@ -65,7 +65,8 @@ const displayCreatureInfo = (info) => {
         searchResults.classList.toggle("visible");
     }
     const { id, name, weight: Weight, height: Height } = info;
-    creatureName.innerHTML = name + ` <span id="creature-id">#${id}</span>`;
+    creatureName.textContent = name;
+    creatureId.textContent = "#" + id;
     weight.textContent = Weight;
     height.textContent = Height;
 
